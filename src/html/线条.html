@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas画线条</title>
+    <script src="../js/lib/jquery.min.js"></script>
+</head>
+<body>
+<canvas id="lineCanvas" width="200px" height="100px" style="border:1px solid #CCC">
+    您的浏览器不支持canvas标签.
+</canvas>
+<script>
+    var lineCanvas = $('#lineCanvas')[0];
+    var ctx = lineCanvas.getContext('2d');
+
+    ctx.moveTo(10, 10);
+    ctx.lineTo(150, 50);
+    ctx.lineTo(10, 50);
+    ctx.stroke();
+
+</script>
+</body>
+</html>
