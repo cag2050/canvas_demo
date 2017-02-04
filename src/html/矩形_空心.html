@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas画矩形</title>
+    <script src="../js/lib/jquery.min.js"></script>
+</head>
+<body>
+<canvas id="rectCanvas">
+    您的浏览器不支持canvas标签.
+</canvas>
+<script>
+    var rectCanvas = $('#rectCanvas')[0]; // jQuery()返回的是jQuery对象，而jQuery对象是没有getContext方法的，需要把jQuery对象转换成Dom对象，
+    // 官方文档推荐的方法如上述代码，其实jQuery对象就是类数组，用数组下标可以取得Dom对象。
+    // JQuery对象转换成Js对象：li[0]或者lis.get(0);
+    // Js对象转JQuery对象：$(lis[0])
+    //    var rectCanvas = $('#rectCanvas').get(0);
+    //    var rectCanvas = document.getElementById('rectCanvas');
+    var ctx = rectCanvas.getContext('2d');
+
+    ctx.fillStyle = '#FF0000';
+//    ctx.fillRect(0, 0, 80, 100); // 实心矩形
+    ctx.strokeRect(0, 0, 80, 100); // 空心矩形
+
+</script>
+</body>
+</html>

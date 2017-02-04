@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/lib/jquery.min.js"></script>
+</head>
+<body>
+<canvas id="circleCanvas" width="200px" height="100px" style="border:1px solid #CCC">
+    您的浏览器不支持canvas标签.
+</canvas>
+<script>
+    var circleCanvas = $('#circleCanvas')[0];
+    var ctx = circleCanvas.getContext('2d');
+
+    ctx.fillStyle = '#FF0000';
+    ctx.beginPath();
+    ctx.arc(80, 30, 10, 0, Math.PI * 2); // 以坐标(80,30)为中心,画一个半径为10px的圆
+    ctx.closePath();
+//    ctx.fill(); // 实心圆形
+    ctx.stroke(); // 空心圆形
+
+</script>
+
+</body>
+</html>
